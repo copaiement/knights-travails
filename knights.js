@@ -2,6 +2,7 @@
 function KnightNode(position) {
   return {
     position,
+    path: null,
     m1: null,
     m2: null,
     m3: null,
@@ -16,7 +17,12 @@ function KnightNode(position) {
 // gameboard class that builds tree of possible moves
 class Gameboard {
   constructor(start) {
-    this.root = this.buildKnight(start);
+    this.root = this.#buildKnight(start);
+  }
+
+  #buildKnight(start) {
+    const knight = KnightNode(start);
+    return knight;
   }
 
   // check if win
@@ -88,10 +94,13 @@ class Gameboard {
     if (queue.length > 0) this.buildMoves(finish, queue);
   }
 
-  buildKnight(start) {
-    const knight = KnightNode(start);
-    return knight;
+  winDepth(finish, root = this.root, path = []) {
+    // reject empty
+    if (finish === null || root === null) return [];
+    // look through 
+    
   }
+
 }
 
 // knightMoves function that gives shortest path btw two squares
