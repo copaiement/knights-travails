@@ -1,0 +1,44 @@
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+.gameboard {
+  display: grid;
+  width: 600px;
+  height: 600px;
+  grid-template-rows: repeat(8, 1fr);
+  grid-template-columns: repeat(8, 1fr);
+}
+
+.square {
+  display: block;
+  color: red;
+  text-align: center;
+}
+
+.black {
+  background-color: rgb(111, 94, 133);
+}
+
+.black:hover {
+  background-color: rgb(88, 88, 88);
+}
+
+.white {
+  background-color: rgb(230, 204, 204);
+}
+
+.white:hover {
+  background-color: rgb(189, 189, 189);
+}
+
+.instructions {
+  background-color: antiquewhite;
+  font-size: larger;
+  padding: 0px 16px;
+}
