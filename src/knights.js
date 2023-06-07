@@ -70,7 +70,6 @@ class Gameboard {
 }
 
 // knightMoves function that gives shortest path btw two squares
-// return error for impossible moves (outside board)
 function knightMoves(start, finish) {
   // set up class
   let knight = new Gameboard(start);
@@ -82,10 +81,14 @@ function knightMoves(start, finish) {
   moves.forEach((move) => {
     pathStr += `, [${move}]`;
   });
-  // Console.log results
-  console.log(`Start: [${start}], Finish: [${finish}]`);
-  console.log(`Shortest path is ${numMoves} moves.`);
-  console.log(`Path: ${pathStr}`);
+  // Save results
+  const results = [];
+  results[0] = (`Start: [${start}], Finish: [${finish}]`);
+  results[1] = (`Shortest path is ${numMoves} moves.`);
+  results[2] = (`Path: ${pathStr}`);
+  results[3] = moves;
+
+  return results;
 }
 
 export {
