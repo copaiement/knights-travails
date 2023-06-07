@@ -88,4 +88,6 @@ function knightMoves(start, finish) {
   console.log(`Path: ${pathStr}`);
 }
 
-knightMoves([4, 4], [0, 1]);
+export {
+  knightMoves
+};

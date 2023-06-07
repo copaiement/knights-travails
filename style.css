@@ -16,9 +16,15 @@
 }
 
 .square {
-  display: block;
-  color: red;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  pointer-events: none;
 }
 
 .black {
@@ -41,4 +47,8 @@
   background-color: antiquewhite;
   font-size: larger;
   padding: 0px 16px;
+}
+
+.hidden {
+  display: none;
 }
